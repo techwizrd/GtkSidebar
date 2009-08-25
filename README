@@ -1,0 +1,5 @@
+== README
+
+GtkSidebar is a PyGTK widget for simple creation and management of sidebars.
+
+You can view a demo by running GtkSidebar.py
