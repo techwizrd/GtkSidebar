@@ -30,7 +30,7 @@ class GtkSidebar(gtk.Frame):
             self.SBcolumn.set_cell_data_func(self.SBcell0, self.make_pb)
         else:
             self.SBcolumn.set_attributes(self.SBcell0, stock_id=1)
-        self.SBcolumn.set_attributes(self.SBcell1, text=0)
+        self.SBcolumn.set_attributes(self.SBcell1, markup=0)
 
         self.SBtreeview.set_search_column(0)
         self.SBcolumn.set_sort_column_id(0)
@@ -75,8 +75,8 @@ if __name__ == "__main__":
     b = GtkSidebar()
     a.add(b)
     a.show_all()
-    for item in range(1, 5):
-    	b.add_item(None, ['Parent %i' % item, gtk.STOCK_OPEN])
+    for item in range(1, 6):
+    	b.add_item(None, ['Parent %i' % item, None])
     for parent in range(6,11):
         piter = b.add_item(None, ['Parent %i' % parent, gtk.STOCK_OPEN])
         for child in range(1,6):
